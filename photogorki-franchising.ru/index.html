@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Бизнес вместе с Photogorki.ru</title>
+    <meta name="description" content="Франчайзинг от Photogorki.ru">
+    <link rel="stylesheet" href="css/style.css">
+	
+	    <script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/jquery.maskedinput.min.js"></script>
+		<script src="js/jquery.countdown.js"></script>
+		<script src="js/script2.js"></script>
+		<link rel="shortcut icon" href="images/favicon.ico" />
+</head>
+<body>
+	
+<script type='text/javascript'>var dateFormat="dd.mm.yyyy",us_msg={missing:'Не задано обязательное поле: "%s"',invalid:'Недопустимое значение поля: "%s"',email_or_phone:"Не задан ни email, ни телефон",email_absent:"Не указан электронный адрес",phone_absent:"Не указан телефон",no_list_ids:"Не выбрано ни одного списка рассылки"},us_emailRegexp=/^[a-zA-Z0-9_+=-]+[a-zA-Z0-9\._+=-]*@[a-zA-Z0-9][a-zA-Z0-9-]*(\.[a-zA-Z0-9]([a-zA-Z0-9-]*))*\.([a-zA-Z]{2,6})$/,us_phoneRegexp=/^\s*[\d +()-.]{7,32}\s*$/;if(typeof us_=="undefined")var us_=new function(){function i(a){var b=a.getElementsByTagName("input");for(var c=0;c<b.length;c++){var d=b[c];if(d.getAttribute("name")=="charset"){d.value==""&&(d.value=document.characterSet?document.characterSet:document.charset);return}}}function j(a){var b=document,c=b.createElement("div");c.style.position="absolute",c.style.width="auto",c=b.body.appendChild(c),c.appendChild(a),a.style.display="",d.push(c)}function k(){var a=window,b=document,c=a.innerWidth?a.innerWidth:b.body.clientWidth,e=a.innerHeight?a.innerHeight:b.body.clientHeight;for(var f=0;f<d.length;f++){var g=d[f],h=parseInt(g.offsetWidth+""),i=parseInt(g.offsetHeight+"");g.style.left=(c-h)/2+b.body.scrollLeft+f*10,g.style.top=(e-i)/2+b.body.scrollTop+f*10}}var a=!1,b=window.onload;window.onload=function(){us_.onLoad()};var c=null,d=[],e=!1,f=!1,g={},h=new Event("loadFormJavascript");window.addEventListener("loadFormJavascript",function(){us_.onLoad()},!1),this.onLoad=function(){var d,e=document.getElementsByTagName("form"),f=[];for(d=0;d<e.length;d++)f.push(e[d]);for(d=0;d<f.length;d++){var g=f[d],h=g.getAttribute("us_mode");if(!h)continue;h=="popup"&&j(g),i(g)}k(),c=window.onresize,window.onresize=function(){us_.onResize()},a=!0,b&&b();var l=document.getElementsByClassName("formdatepicker");for(var d in l)var m=new Pikaday({field:l[d],format:dateFormat.toUpperCase()})},this.onResize=function(){k(),c&&c()},trim=function(a){return a==null?"":a.replace(/^\s\s*/,"").replace(/\s\s*$/,"")},this.onSubmit=function(b){return a?(_hideErrorMessages(b),!_validateTextInputs(b)||!_validateCheckboxes(b)||!_validateRadios(b)?!1:!0):(alert("us_.onLoad() has not been called"),!1)},_validateTextInputs=function(a){var b=a.querySelectorAll("input[type=text]");if(b.length==0)return!0;for(var c=0;c<b.length;c++){var d=b[c];g[d.name]&&g[d.name].length>0?d.style["border-color"]=g[d.name]:g[d.name]=d.style["border-color"];var h=d.getAttribute("name");h==="email"&&(e=!0),h==="phone"&&(f=!0);var i=trim(d.value),j=i==="",k=d.getAttribute("_required")==="1";if(j){if(k){var l=us_msg.missing.replace("%s",d.getAttribute("_label"));return _showErrorMessage(l,d),d.style["border-color"]="#ff592d",d.focus(),!1}}else{function m(a){var b=us_msg.invalid.replace("%s",a.getAttribute("_label"));_showErrorMessage(b,a),a.style["border-color"]="#ff592d",a.focus()}var n=d.getAttribute("_validator"),o=null;switch(n){case null:case"":case"string":case"number":case"text":break;case"date":o=dateFormat.replace(/dd?/i,"([0-9]{1,2})"),o=o.replace(/mm?/i,"([0-9]{1,2})"),o=o.replace(/yy{1,3}/i,"([0-9]{2,4})"),o=new RegExp(o);var p=o.exec(i);if(!(p&&p[1]&&p[2]&&p[3]))return m(d),!1;var q=parseInt(p[1],10),r=parseInt(p[2],10),s=parseInt(p[3],10),t=new Date(s,r-1,q);if(t.getFullYear()!=s||t.getMonth()+1!=r||t.getDate()!=q)return m(d),!1;break;case"email":o=us_emailRegexp;break;case"phone":o=us_phoneRegexp;break;case"float":o=/^[+\-]?\d+(\.\d+)?$/;break;default:return alert('Internal error: unknown validator "'+n+'"'),d.focus(),!1}if(o&&!o.test(i)&&n!="date")return m(d),!1}}return!0},_validateCheckboxes=function(a){return _validateOptionsList(a,"checkbox")},_validateRadios=function(a){return _validateOptionsList(a,"radio")},_validateOptionsList=function(a,b){function f(a){return!a||a==document?null:a.parentNode.nodeName&&a.parentNode.nodeName.toLowerCase()==="ul"?a.parentNode:f(a.parentNode)}var c=a.querySelectorAll("input[type="+b+"]");if(c.length==0)return!0;var d=new Array,e="";for(var g=0;g<c.length;g++)c[g].getAttribute("_required")==="1"&&(e=c[g].getAttribute("name").replace(/(:|\.|\[|\])/g,"\\$1"),d.indexOf(e)===-1&&d.push(e));for(var h in d){var e=d[h],i=a.querySelectorAll("input[name="+e+"]:checked").length,j=a.querySelectorAll("input[name="+e+"]");if(i===0){var k=f(j[0]),l=us_msg.missing.replace("%s",j[0].getAttribute("_label"));return _showErrorMessage(l,k),!1}}return!0},_showErrorMessage=function(a,b){if(b){var c=b.parentNode.querySelector(".error-block");c.innerHTML=a,c.style.display="block"}},_hideErrorMessages=function(a){var b=a.querySelectorAll(".error-block");if(b.length==0)return;for(var c=0;c<b.length;c++){var d=b[c];d.innerHtml="",d.style.display="none"}}}</script><script type='text/javascript' src='http://cp.unisender.com/v5/template-editor-new/js/lib/moment/moment-with-langs.min.js'></script><script type='text/javascript' src='http://cp.unisender.com/v5/template-editor-new/js/lib/datepicker/pikaday.js'></script><link rel='stylesheet' media='all' href='http://cp.unisender.com/v5/template-editor-new/js/lib/datepicker/pikaday.css'>
+	
+	
+    <div class="header main">
+        <div class="logotype">
+            <a href="#"><img src="images/logotype.png" alt="Photogorki"></a>
+        </div>
+        <div class="phone">
+            <span> +7 (347) 266-92-71</span>
+            <div class="call"><a href="#sell">Заказать звонок</a></div>
+        </div>
+		<div class="clear"></div>
+    </div>
+	
+	<div class="slide">
+		<div class="main_small">
+			<h1 class="title">
+				Открой свой прибыльный бизнес за 15 дней 
+			</h1>
+			
+			<table class="slide">
+				<tr>
+					<td class="td_timer" valign="top">
+						При заказе фотокабины <strong>до <span id="endDate">5 октября</span></strong><br> доставка фотокабины в ваш город бесплатно<br><br>
+						<strong>До окончания акции:</strong>
+						<div class="timer">
+							<div class="time_block">
+								<div class="time">2</div>
+								<div class="time_title">Дни</div>
+							</div>
+							<div class="time_block">
+								<div class="time">34</div>
+								<div class="time_title">Час</div>
+							</div>
+							<div class="time_block">
+								<div class="time">56</div>
+								<div class="time_title">Мин</div>
+							</div>
+							<div class="time_block">
+								<div class="time">14</div>
+								<div class="time_title">Сек</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</td>
+					<td valign="top">
+						<div class="forma">
+							<h3>Оставьте заявку<br> и получите бизнес план<br> для вашего города</h3>
+					<form method="POST" action="http://cp.unisender.com/ru/subscribe?hash=59dkzasraya7nwwou93ojm1t4guq79y4do97317e" name="subscribtion_form" onsubmit="return us_.onSubmit(this);" us_mode="embed">
+					<table>
+						<tr><td><input type="text" name="f_3959015" _validator="string" _label="Имя" _required="1" class="text" placeholder="Введите имя и фамилию"></td></tr>
+						<tr><td><input type="text"  name="phone" _validator="phone" _label="Телефон" _required="1" class="text" placeholder="Введите телефон"></td></tr>
+						<tr><td><input type="text" name="email" _validator="email" _required="1" class="text" placeholder="Введите e-mail"></td></tr>
+						<tr><td><button href="javascript:;" target="_blank"class="button" >Отправить заявку</td></tr>
+					</table>
+					<input type="hidden" name="charset" value="">
+					<input type="hidden" name="default_list_id" value="4277799">
+					<input type="hidden" name="overwrite" value="2"></form>
+					</form>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<div class="title">
+		<h2>Бизнес вместе с <strong>Photogorki</strong></h2>
+	</div>
+	
+	<div class="main_small">
+		<div class="eggs">
+			<table cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="btr tbb btb"><span class="number">1</span>Отсутствие роялти</td>
+					<td class="btr tbb btb"><span class="number">2</span>Не требуются сотрудники</td>
+					<td class="btb tbb"><span class="number">3</span>Чистая прибыль от 15 000 до <br>50 000 руб/мес с каждой кабины</td>
+				</tr>
+				<tr>
+					<td class="btr tbt "><span class="number">4</span>ROI от 105 до 310%</td>
+					<td class="btr tbt"><span class="number">5</span>Зарабатывай с первого дня установки фотокабины</td>
+					<td class="tbt"><span class="number">6</span>Полный комплект бизнеса для старта</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<div class="title">
+		<h2><strong>Преимущества</strong> бизнеса с нами</h2>
+	</div>
+	
+	<div class="futures">
+		<div class="main_small">
+			<ul>
+				<li class="sl">Работай всего 1,5 часа в неделю!</li>
+				<li>Колоссальный спрос на развлекательные фотоуслуги</li>
+				<li>Всесезонность бизнеса</li>
+				<li>Стабильная ежемесячная прибыль с первого дня установки фотокабины</li>
+				<li>Уникальное собственное программное обеспечение для фотокабины</li>
+				<li>Привлекательный и яркий дизайн фотокабин</li>
+				<li>Оперативная техподдержка бизнеса и удаленная диагностика</li>
+				<li>Гарантия на оборудование - 1 год</li>
+			</ul>
+			<img src="images/futures_img.png" class="futures">
+			<h3>Мы сами производим оборудование и знаем, как на этом можно заработать!</h3>
+		</div>
+	</div>
+	
+	<div class="linef">
+		<div class="main">
+			 <h3>Начните зарабатывать на фотокабинках уже через 2 недели</h3>
+			<form method="POST" action="http://cp.unisender.com/ru/subscribe?hash=59dkzasraya7nwwou93ojm1t4guq79y4do97317e" name="subscribtion_form" onsubmit="return us_.onSubmit(this);" us_mode="embed">
+					<table>
+						<tr><td><input type="text" name="f_3959015"  _validator="" _required="1" class="text" placeholder="Введите имя и фамилию"></td>
+						<td><input type="text"  name="phone" _validator="phone" _label="Телефон" _required="1" class="text" placeholder="Введите телефон"></td>
+						<td><input type="text" name="email" _validator="email" _required="1" class="text" placeholder="Введите e-mail"></td>
+						<td><button href="javascript:;" target="_blank"class="button">Отправить заявку</td></tr>
+					</table>
+					<input type="hidden" name="charset" value="">
+					<input type="hidden" name="default_list_id" value="4277799">
+					<input type="hidden" name="overwrite" value="2">
+					</form>
+			<h5>Ваши контактные данные в безопасности и не будут переданы третьим лицам</h5>
+		</div>
+	</div>
+	
+	<div class="title">
+		<h2>Почему наши фотокабины так популярны</h2>
+	</div>
+	
+	<div class="popular">
+		<div class="main">
+			<div class="pop_text">
+				<img src="images/pop_img.png" class="popular">
+					<ul>
+						<li>Развлекательное фото</li>
+						<li>Отличное настроение</li>
+						<li>Яркий и привлекательный дизайн</li>
+						<li>Приятные воспоминания</li>
+						<li>Развлечение для всей компании</li>
+					</ul>
+				<div class="clear"></div>
+			</div>
+			<center><img src="images/photokol.jpg" width="910" class="kol"></center>
+		</div>
+	</div>
+	
+	<div class="title">
+		<h2><strong>Что говорят</strong> о нашей франшизе</h2>
+	</div>
+	
+	<div class="main">
+		<div class="comment">
+			<div class="content">
+				<div class="name">Альмира Нагимова</div>
+				<div class="text">Я впервые увидела идею развлекательных фотокабин в Уфе, когда гостила у родственников. Вечером пошли в кино. Как обычно, купили билеты, встали в очередь за колой и поп-корном и я сразу приметила стояющую неподалеку фотокабину, рядом с которой толпилась молодежь: смеялась, шутила, показывала друг другу смешные фотки. Мы тоже подошли, сфотографировались, получили фото. Идея с автоматической фотокабиной мне показалась отличной. Сразу записала...
+				</div>
+				<div class="link"><a href="#comment">Читать далее...</a></div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="four">
+		<div class="main">
+			<table>
+				<tr>
+					<td class="btr btb">Яркий дизайн фотокабин</td>
+					<td class="btb">5 лет успешной работы</td>
+				</tr>
+				<tr>
+					<td class="btr">Более 200 000 фотоснимков</td>
+					<td>Собственное удобное ПО</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<div class="linef">
+		<div class="main">
+			 <h3>Начните зарабатывать на фотокабинках уже через 2 недели</h3>
+			<form method="POST" action="http://cp.unisender.com/ru/subscribe?hash=59dkzasraya7nwwou93ojm1t4guq79y4do97317e" name="subscribtion_form" onsubmit="return us_.onSubmit(this);" us_mode="embed">
+					<table>
+						<tr><td><input type="text" name="f_3959015"  _validator="" _required="1" class="text" placeholder="Введите имя и фамилию"></td>
+						<td><input type="text"  name="phone" _validator="phone" _label="Телефон" _required="1" class="text" placeholder="Введите телефон"></td>
+						<td><input type="text" name="email" _validator="email" _required="1" class="text" placeholder="Введите e-mail"></td>
+						<td><button href="javascript:;" target="_blank"class="button">Отправить заявку</td></tr>
+					</table>
+					<input type="hidden" name="charset" value="">
+					<input type="hidden" name="default_list_id" value="4277799">
+					<input type="hidden" name="overwrite" value="2">
+					</form>
+			<h5>Ваши контактные данные в безопасности и не будут переданы третьим лицам</h5>
+		</div>
+	</div>
+	
+	<div class="sell">
+		<div class="main">
+			<div class="titleb">
+				<h2>Наши<strong> франшизы</strong></h2>
+			</div>
+			<div class="sellb">
+				<div class="sellt">1 фотокабина <br><strong>159 000 руб</strong> стандарт</div>
+				<div class="text">
+					<ul>
+						<li>Фотокабина</li>
+						<li>Програмное обеспечение</li>
+						<li>Техподдержка 24/7</li>
+						<li>Руководство по ведению бизнеса</li>
+						<li>Гарантия на оборудование 1 год</li>
+					</ul>
+				</div>
+				<div class="button"><a href="#sell">Заказать франшизу</a></div>
+			</div>
+			<div class="sellb">
+				<div class="sellt">2 фотокабины <br><strong>299 000 руб</strong> премиум</div>
+				<div class="text">
+					<ul>
+						<li>Фотокабина</li>
+						<li>Програмное обеспечение</li>
+						<li>Техподдержка 24/7</li>
+						<li>Руководство по ведению бизнеса</li>
+						<li>Гарантия на оборудование 1 год</li>
+						<li><span class="yellow">Расходные материалы</span></li>
+					</ul>
+				</div>
+				<div class="button"><a href="#sell">Заказать франшизу</a></div>
+			</div>
+			<div class="sellb">
+				<div class="sellt">5 фотокабин <br><strong>649 000 руб</strong> VIP</div>
+				<div class="text">
+					<ul>
+						<li>Фотокабина</li>
+						<li>Програмное обеспечение</li>
+						<li>Техподдержка 24/7</li>
+						<li>Руководство по ведению бизнеса</li>
+						<li>Гарантия на оборудование 1 год</li>
+						<li><span class="yellow">Расходные материалы</span></li>
+						<li><span class="blue">Поиск арендатора и подписание договора</span></li>
+					</ul>
+				</div>
+				<div class="button"><a href="#sell">Заказать франшизу</a></div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div class="main">
+		<div class="footer">
+			<div class="timerok">
+				При заказе фотокабины <strong>до <span id="endDat">5 октября</span></strong><br> доставка фотокабины в ваш город бесплатно<br><br>
+				<strong>До окончания акции:</strong>
+				<div class="timer">
+					<div class="time_block">
+						<div class="time">2</div>
+						<div class="time_title">Дни</div>
+					</div>
+					<div class="time_block">
+						<div class="time">34</div>
+						<div class="time_title">Час</div>
+					</div>
+					<div class="time_block">
+						<div class="time">56</div>
+						<div class="time_title">Мин</div>
+					</div>
+					<div class="time_block">
+						<div class="time">14</div>
+						<div class="time_title">Сек</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="linef">
+				<div class="main">
+				 <h3>Начните зарабатывать на фотокабинках уже через 2 недели</h3>
+				<form method="POST" action="http://cp.unisender.com/ru/subscribe?hash=59dkzasraya7nwwou93ojm1t4guq79y4do97317e" name="subscribtion_form" onsubmit="return us_.onSubmit(this);" us_mode="embed">
+					<table>
+						<tr><td><input type="text" name="f_3959015"  _validator="" _required="1" class="text" placeholder="Введите имя и фамилию"></td>
+						<td><input type="text"  name="phone" _validator="phone" _label="Телефон" _required="1" class="text" placeholder="Введите телефон"></td>
+						<td><input type="text" name="email" _validator="email" _required="1" class="text" placeholder="Введите e-mail"></td>
+						<td><button href="javascript:;" target="_blank"class="button">Отправить заявку</td></tr>
+					</table>
+					<input type="hidden" name="charset" value="">
+					<input type="hidden" name="default_list_id" value="4277799">
+					<input type="hidden" name="overwrite" value="2">
+					</form>
+				<h5>Ваши контактные данные в безопасности и не будут переданы третьим лицам</h5>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+<div id="sell" class="modalDialog">
+	<div>
+		<a href="#close" title="Закрыть" class="close">X</a>
+		<div class="forma" style="box-shadow:none; margin:auto;">
+			<h3>Оставьте заявку</h3>
+			<form method="POST" action="http://cp.unisender.com/ru/subscribe?hash=59dkzasraya7nwwou93ojm1t4guq79y4do97317e" name="subscribtion_form" onsubmit="return us_.onSubmit(this);" us_mode="embed">
+					<table>
+						<tr><td><input type="text" name="f_3959015"  _validator="" _required="1" class="text" placeholder="Введите имя и фамилию"></td></tr>
+						<tr><td><input type="text"  name="phone" _validator="phone" _label="Телефон" _required="1" class="text" placeholder="Введите телефон"></td></tr>
+						<tr><td><input type="text" name="email" _validator="email" _required="1" class="text" placeholder="Введите e-mail"></td></tr>
+						<tr><td><button href="javascript:;" target="_blank"class="button" >Отправить заявку</td></tr>
+					</table>
+					<input type="hidden" name="charset" value="">
+					<input type="hidden" name="default_list_id" value="4277799">
+					<input type="hidden" name="overwrite" value="2">
+					</form>
+		</div>
+	</div>
+</div>
+	
+<div id="comment" class="modalcomment">
+	<div>
+		<a href="#close" title="Закрыть" class="close">X</a>
+		<div class="name">Альмира Нагимова / Партнер PHOTOGORKI в Москве:</div>
+		<p>Я впервые увидела идею развлекательных фотокабин в Уфе, когда гостила у родственников. Вечером пошли в кино. Как обычно, купили билеты, встали в очередь за колой и поп-корном и я сразу приметила стояющую неподалеку фотокабину, рядом с которой толпилась молодежь: смеялась, шутила, показывала друг другу смешные фотки. Мы тоже подошли, сфотографировались, получили фото. Идея с автоматической фотокабиной мне показалась отличной. Сразу записала контакты владельцев, затем еще раз сходила – посмотреть со стороны, насколько популярна кабина среди посетителей и убедилась, что идея посетителям нравится. Два-три дня все еще раз обдумывала, взвешивала и сразу по приезду в Москву связалась с владельцами. На тот момент я как раз поступила в аспирантуру и подыскивала себе бизнес, не требующий много времени и внимания, так как практически все время занимает учеба. Я обзвонила кинотеатры, торговые центры с предложением установить фотокабины, сразу нашла два подходящих места и договорилась с уфимским производителем о партнерстве.</p>
+ 
+<p>На сегодня у меня 4 фотокабины по партнерской схеме, установленых в 4 киотеатрах Москвы. Доход с них позволяет мне не искать постоянную работу, оплачивать учебу и самой обеспечивать свою жизнь. Пока справляююсь со всем одна, но с покупкой мобильной фотокабины, подумываю о найме помощника. Сами пониматете, Москва - город большой, поэтому расти есть куда – вот сейчас обсуждаю условия аренды с 5-м кинотеатром. Плюс, думаю о покупке мобильный фотокабины для обслуживания свадеб и мероприятий, сейчас эта услуга становится очень популярной. </p>
+                                                                                      
+<p>Основателями PhotoGorki очень довольна, в любое время помогут и поддержут советом, будь то развитие бизнеса, расчет выгодности новых мест или ИТ-вопросы".</p>
+	</div>
+</div>
+	
+	
+
+</body>
+</html>

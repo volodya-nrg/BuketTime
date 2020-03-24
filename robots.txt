@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /img/
+
+User-agent: *
+Disallow: /reg.php
+Disallow: /js.js
+Disallow: /css.css
+Disallow: /cart.php

@@ -1,0 +1,17 @@
+AddHandler application/x-httpd-php53 .php
+Options -Indexes
+AddDefaultCharset utf-8
+
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^www\.bukettime\.ru$
+RewriteRule ^/?$ "https\:\/\/bukettime\.ru\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^photogorki\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.photogorki\.com$
+RewriteRule ^/?$ "http\:\/\/photogorki\.ru" [R=301,L]
+
+#RewriteCond %{HTTP_HOST} !^(www\.)?bukettime\.ru(.*)$
+#RewriteCond %{HTTP_HOST} ^(www\.)?([a-zA-Z0-9-]+)\.bukettime\.ru(.*)$
+#RewriteRule ^([a-zA-Z0-9-]+)\/(.*)$ http://bukettime.ru/test.php?mod=$1&id=$2 [L]

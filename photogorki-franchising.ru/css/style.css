@@ -1,0 +1,704 @@
+/*
+//  Основные стили
+*/
+body{
+    padding: 0px;
+    margin: 0px;
+	font-family: Din;
+	color:#222;
+}
+
+input{
+	outline: none;
+}
+
+div.main{
+    width:960px;
+    margin: auto;
+}
+
+div.main_small{
+	width: 810px;
+	margin: auto;
+}
+
+h1,h2,h3,h4,h5,h6,ul,p{
+    padding: 0px;
+    margin: 0px;
+    line-height: normal;
+    font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Helf';
+	src: url('../fonts/HelveticaNeueCyr-Light.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Din';
+	src: url('../fonts/PFDinTextCondPro-Light.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Din_Bold';
+	src: url('../fonts/PFDinTextCondPro-Bold.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+div.clear{
+	clear:both;
+}
+
+
+
+/*
+//  Шапка сайта
+*/
+div.header{ 
+    margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+div.logotype{
+    float: left;
+    width:390px;
+}
+
+div.phone{
+    float: right;
+    font-family: Helf;
+    font-size: 20px;
+    text-align: right;
+}
+
+div.call{
+    font-size: 14px;
+	background: url(../images/button_bg.png) repeat-x;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 0px 5px 0px #831818;
+	margin-top: 10px;
+}
+
+div.call:active{
+	position: relative;
+	top:2px;
+	box-shadow: 0px 3px 0px #831818;
+}
+
+div.call a{
+	color:#fff;
+	text-decoration:none;
+	text-transform: uppercase;
+	display: block;
+	padding: 7px;
+}
+
+
+
+/*
+//  Слайд
+*/
+div.slide{
+	background: url(../images/slide_bg.jpg) top center no-repeat;
+	background-size:cover;
+	width: 100%;
+	height:420px;
+}
+
+div.slide h1.title{
+	font-family: "Din";
+	font-size: 45px;
+	margin: auto;
+	width:650px;
+	text-align: center;
+	color:#fff;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.75);
+	text-transform: uppercase;
+	padding-top: 40px;
+	line-height: 40px;
+}
+
+table.slide{
+	margin-top: 20px;
+}
+
+td.td_timer{
+	font-size: 20px;
+	color:#fff;
+	font-family: Din;
+	text-align: center;
+	vertical-align: top;
+	width: 450px;
+	padding: 0px 50px;
+	text-shadow: 1px 1px 8px rgba(0,0,0,1);
+	text-transform: uppercase;
+}
+
+td.td_timer strong{
+	font-family: Din_bold;
+}
+
+div.timer{
+	width: 240px;
+	margin: auto;
+	margin-top: 10px;
+}
+
+div.timer > div.time_block{
+	width: 50px;
+	float: left;
+	margin-right: 10px;
+}
+
+div.time{
+	font-family: Din;
+	font-size: 48px;
+	background: rgba(0,0,0,0.7);
+	height: 70px; 
+	line-height: 70px;
+	border-radius: 5px;
+	border-bottom: 1px solid rgba(255,255,255,1);
+	box-shadow: 0px 0px 50px rgba(0,0,0,0.5) inset;
+}
+
+div.time_title{
+	font-size: 14px;
+}
+
+div.forma{
+	width:240px;
+	height: 290px;
+	background: #fff;
+	box-shadow: 0px 5px 30px rgba(0,0,0,0.45);
+	padding: 5px;
+	border-radius: 5px;
+}
+
+div.forma h3{
+	text-align: center;
+	font-family: Helf;
+	font-size: 18px;
+}
+
+input.text{
+	width:225px;
+	border-radius: 5px;
+	padding: 5px;
+	margin-top: 7px;
+	box-shadow: 0px 1px 4px rgba(0,0,0,0.25) inset;
+	border: 1px solid #b2b2b2;
+	font-family: Helf;
+	font-size: 14px;
+	height: 20px;
+}
+
+button.button{
+	margin-top: 10px;
+	background: url(../images/big_button_bg.png) repeat-x;
+	width:237px;
+	color:#fff;
+	border:none;
+	height:35px;
+	font-family: Helf;
+	font-size: 14px;
+	text-transform: uppercase;
+	border-radius: 5px;
+	box-shadow: 0px 5px 0px #851c1c;
+}
+
+button.button:active{
+	position: relative;
+	top:3px;
+	box-shadow: 0px 2px 0px #851c1c;
+}
+
+
+
+
+/*
+//  Тайтл блоков
+*/
+div.title{
+	clear: both;	
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+div.title h2{
+	font-size: 34px;
+ 	text-transform: uppercase;
+ 	text-align: center;
+	width:600px;
+	margin: auto;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+div.title h2 > strong{
+	font-family: Din_bold;
+}
+
+div.titleb{
+	clear: both;	
+	padding-top: 50px;
+	margin-bottom: 30px;
+}
+
+div.titleb h2{
+	font-size: 34px;
+ 	text-transform: uppercase;
+ 	text-align: center;
+	width:600px;
+	margin: auto;
+	border-bottom: 1px solid #333;
+}
+
+div.titleb h2 > strong{
+	font-family: Din_bold;
+}
+
+
+
+/*
+// Яйца
+*/
+div.eggs{
+	color:#ca2525;
+}
+
+div.eggs table > tbody > tr > td{
+	width: 250px;
+	padding: 19px 10px;
+}
+
+.btr{
+	border-right: 1px solid #e5e5e5;
+}
+
+.btb{
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.tbt{
+	background: url(../images/tbt.png) repeat-x;
+	border-top:1px solid #fff;
+}
+
+.tbb{
+	background: url(../images/tbb.png) repeat-x;
+}
+
+span.number{
+	font-size: 64px;
+	font-family: Din_bold;
+	float:left;
+	display: inline;
+	line-height: 40px;
+	margin-right: 5px;
+}
+
+
+
+
+/*
+//  Преимущества
+*/
+
+div.futures{
+	background: url(../images/bg_gradient.png) bottom repeat-x;
+	padding-bottom: 30px;
+}
+
+div.futures ul {
+	float:left;
+}
+div.futures ul > li{
+	font-size: 20px;
+	list-style: url(../images/check.png);
+	margin-bottom: 10px;
+}
+
+div.futures img.futures{
+	float:right;
+}
+
+div.futures h3{
+	text-align: center;
+	font-size: 34px;
+	clear: both;
+	padding-top:10px;
+}
+
+
+/*
+//  Длинная форма регистрации
+*/
+div.linef{
+	clear: both;
+	height:120px;
+	background: #fff;
+	padding: 5px;
+	box-shadow: 0px 5px 30px rgba(0,0,0,0.3);
+	position: relative;
+}
+
+div.linef h3{
+	font-size: 30px;
+	text-align: center;
+}
+
+div.linef h5{
+	font-size: 14px;
+	margin-top: 8px;
+	text-align: center;
+	color:#666;
+}
+
+div.linef table{
+	margin: auto;
+}
+
+div.linef input.text{
+	width:170px !important;
+	margin-right: 5px;
+}
+
+div.linef button.button{
+	width:170px;
+	margin-left: 10px;
+	margin-bottom: 8px;
+	height: 27px;
+}
+
+
+
+/*
+//  Популярность
+*/
+div.popular{
+	background: url(../images/popular_bg.jpg) center top no-repeat;
+	height:1000px;
+}
+
+div.pop_text{
+	background: #fff;
+	border-radius: 5px;
+	width: 260px;
+	padding: 20px 10px 10px 10px;
+	margin: auto;
+	position: relative;
+	top:70px;
+	box-shadow: 0px 5px 30px rgba(0,0,0,0.3);
+}
+
+div.pop_text ul > li{
+	list-style: none;
+	margin-bottom: 18px;
+	font-size: 18px;
+}
+
+img.popular{
+	float:left;
+	margin-right: 10px;
+}
+
+img.kol{
+	position: relative;
+	top:120px;
+}
+
+/*
+// Комментарий
+*/
+
+div.comment{
+	border-radius: 5px;
+	background: url(../images/photo.png) left top no-repeat;
+	box-shadow: 0px 5px 30px rgba(0,0,0,0.3);
+	height:155px;
+	padding: 10px;
+	margin-bottom: 70px;
+}
+
+div.comment > div.content{
+	margin-left: 190px;
+}
+
+div.comment > div.content > div.name{
+	font-size: 24px;
+	text-transform: uppercase;
+}
+
+div.comment > div.content > div.text{
+	font-size: 16px;
+	margin-top: 10px;
+	line-height: 20px;
+	color:#444;
+}
+
+div.comment > div.content > div.link{
+	float: right;
+	width:100px;
+	text-align: right;
+	margin: 15px;
+}
+
+div.comment > div.content > div.link a{
+	color:#ca2525;
+}
+
+div.comment > div.content > div.link a:hover{
+	color:#aa2323;	
+}
+
+
+
+/*
+// 4 плюхи
+*/
+
+div.four{
+	padding-bottom: 70px;
+	background: url(../images/bg_gradient.png) top repeat-x;
+}
+
+div.four > div.main > table{
+	margin: auto;
+	box-shadow: 0px 5px 30px rgba(0,0,0,0.3);
+	background: #fff;
+	border-radius: 5px;
+}
+
+div.four > div.main > table > tbody > tr > td{
+	width:300px;
+	text-align: center;
+	font-size: 26px;
+	padding: 30px 0px;
+}
+
+
+
+
+/*
+//  Продукты
+*/
+div.sell{
+	background: url(../images/sell_bg.jpg) top center no-repeat;
+	background-size: cover;
+	height: 580px;
+}
+
+div.sell > div.main > div.sellb{
+	width:280px;
+	border-radius: 5px;
+	background: #fff;
+	padding-bottom: 15px;
+	box-shadow: 0px 5px 30px rgba(0,0,0,0.3);
+	float:left;
+	margin: 15px;
+}
+
+div.sell > div.main > div.sellb > div.sellt{
+	font-size: 24px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 10px;
+	border-bottom: 1px dotted #333;
+}
+
+div.sell > div.main > div.sellb > div.sellt strong{
+	font-family: Din_bold;
+}
+
+div.sell > div.main > div.sellb > div.text{
+	background: url(../images/sellb_bg.png) top repeat-x;
+}
+
+div.sell > div.main > div.sellb > div.text > ul{
+	padding-top: 10px;
+}
+
+div.sell > div.main > div.sellb > div.text > ul > li{
+	font-size: 16px;
+	text-transform: uppercase;
+	list-style: none;
+	padding:5px 20px 5px 20px;
+}
+
+div.sell > div.main > div.sellb > div.text > ul > li > span.yellow{
+	background: #e3e528;
+	padding: 3px;
+	border-radius: 3px;
+}
+
+div.sell > div.main > div.sellb > div.text > ul > li > span.blue{
+	background: #91d1f9;
+	padding: 3px;
+	border-radius: 3px;
+}
+
+div.sell > div.main > div.sellb > div.button{
+	text-align: center;
+	width: 250px; 
+	margin: auto;
+	margin-top: 15px;
+
+}
+
+div.sell > div.main > div.sellb> div.button a{
+	background: url(../images/big_button_bg.png) repeat-x;
+	display: block;
+	padding: 7px;
+	color:#fff;
+	text-decoration: none;
+	border-radius: 5px;
+	font-size: 18px;
+	text-transform: uppercase;
+	box-shadow: 0px 5px 0px #801111;
+}
+
+
+
+/*
+//  Футер сайта
+*/
+div.footer{
+	border-radius: 5px;
+	background: url(../images/bg_gradient.png) bottom repeat-x;
+	border:1px dotted #333;
+	height:370px;
+	margin: 30px 0px;
+	box-shadow: 0px 5px 30px rgba(0,0,0,0.3);
+}
+
+div.footer > div.timerok{
+	margin-top: 20px;
+	text-align: center;
+	font-size: 20px;
+	color:#ca2525;
+	text-transform: uppercase;
+}
+
+div.footer > div.timerok strong{
+	font-family: Din_bold;
+}
+
+div.footer div.time{
+	color:#fff !important;
+}
+
+div.footer div.time_title{
+	color:#333;
+}
+
+div.footer div.linef{
+	padding-top: 30px;
+	background: none;
+	box-shadow: none;
+}
+
+div.footer input.button{
+	width:160px;
+	margin-left: 0px;
+}
+
+
+/*
+//  Модальное окно
+*/
+.modalDialog {
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 99999;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		display: none;
+		pointer-events: none;
+	}
+
+.modalDialog:target {
+	display: block;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 250px;
+	height:250px;
+	overflow: hidden;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 5px;
+	background: #fff;
+}
+
+.modalcomment {
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 99999;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		display: none;
+		pointer-events: none;
+	}
+
+.modalcomment:target {
+	display: block;
+	pointer-events: auto;
+}
+
+.modalcomment > div {
+	width: 800px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 5px;
+	background: #fff;
+}
+
+.modalcomment > div > p{
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 15px;
+}
+
+.modalcomment > div > div.name{
+	font-size: 24px;
+	font-family: Din_bold;
+	color:#444;
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: 5px;
+	text-align: center;
+	top: 5px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+}
+
+.close:hover { background: #ca2525; }
